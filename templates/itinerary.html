@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Itinerary
+{% endblock %}
+
+{% block main %}
+    <p>
+        Itinerary
+    </p>
+
+    <form action="/itinerary" method="post" class="itinerary" style="min-width: 100%">
+        <br>
+        <input class="" type="date" name="date">
+        <input class="" type="time" name="time">
+        <br><br>
+        <div class="form-group">
+            <select class="form-control" name="place">
+                <!-- can make a for loop when I get MyPlaces working -->
+                <option type="search" value="">Where are you going? Need to make search</option>
+                <option value="Seoul">Seoul</option>
+                <option value="Chuncheon">Chuncheon</option>
+            </select>
+        </div>
+        <textarea class="form-control" id="textarea" rows="2" style="min-width: 80%" name="notes">What are you gonna do?</textarea>
+        <br><br>
+        <button id=commentbutton class="btn btn-primary" type="submit">ADD TO SCHEDULE</button>
+    </form>
+
+{% endblock %}

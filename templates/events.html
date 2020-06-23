@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Events
+{% endblock %}
+
+{% block main %}
+    <br><br>
+    <h1 class="coral-outline">Things To Do</h1>
+    
+    <br>
+    <div class=paragraphs>
+        <p class="left-text">
+            Here let's include events and holidays categorized by date. User can
+            then search by month, week, or day to find things to do and celebrate.
+            We could also have it added to itinerary?
+        </p>
+    </div>
+    
+
+    
+    <!-- section for adding and reading comments -->
+    <div class="comments">
+        <p  id="shadows" class="left-text" >
+            <b>Leave your own suggestion or comment:</b>
+        </p>
+        <form action="/events" method="post" class="submit-comment" style="min-width: 100%">
+            <textarea class="form-control" id="textarea" rows="1" style="min-width: 100%" name="comment"></textarea>
+            <div class="small-divider"></div>
+            <button id=commentbutton class="btn btn-primary" type="submit">POST COMMENT</button>
+        </form>
+        <br>
+    <!-- add all comments to page -->
+        {% for comment in comments_list %}
+            <br>
+            <div class="comment-box">
+                <p class="left-text"><b>{{ comment.username }}</b> says:</p>
+                <p class="left-text" id="date">{{ comment.time }}</p>
+                <p class="left-text">{{ comment.comment }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

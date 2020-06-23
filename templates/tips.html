@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tips
+{% endblock %}
+
+{% block main %}
+    <br><br>
+    <h1 class="coral-outline">Tourist Tips</h1>
+    <br>
+    <div class=paragraphs>
+        <h2 class="header">
+            So you want to have a blast in South Korea while not feeling like a clueless
+            foreigner... you've come to the right place! Keep reading to learn the basics of
+            navigating this unique country, compiled through <i>extremely</i> thorough research,
+            better than Wikipedia guarenteed.
+        </h2>
+        <br>
+        <h3 class="h3" id="shadows">
+            Fast Facts
+        </h3>
+        <br>
+        <p>First thing's first, here are some important things you need to know before going to South Korea:</p>
+        <p>
+            <b>Capital:&nbsp</b>Seoul<br>
+            <img src="https://media.architecturaldigest.com/photos/5c0ed0538d2a442e241057b1/16:9/w_1280,c_limit/GettyImages-771579891.jpg"><br>
+            <b>Currency:&nbsp</b>Won (1 USD = 1181 KRW)<br>
+            <img src="https://dvq7ru6yykv6m.cloudfront.net/images/uploads/7515FSMNews%20South%20Korea%20Won%20(2).jpg"><br>
+            <b>President:&nbsp</b>Moon Jae-in<br>
+            <b>Government:&nbsp</b>Republic<br>
+            <b>Population:&nbsp</b>51 million<br>
+            <b>South Korea has the world's fastest internet connection speeds!</b>
+        </p>
+        <br>
+        <h3 class="h3" id="shadows">
+            History
+        </h3>
+        <br>
+        <p class="left-text">
+            The history of Korea, which split into North and South relatively recently, in 1945, is rich and detailed.
+            While most probably think of the aforementioned divide, beauty produdcts, and the booming
+            entertainment industry, there are millenia of political systems, religious influences,
+            power struggles, and more that have shaped Korean culture as it is today.
+            While an exhaustive account of the changes that occurred in the Korean peninsula won't 
+            directly reside on this site, below lies a selection of fantastic
+            resources that you should use to learn about the country you're soon to be traversing.
+        </p>
+        <br>
+        <p class="left-text">
+            First, I recommend you watch this brief video briefly covering the entire history of Korea 
+            (dope explosion effects included):
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Z6EnEXPprXY"
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+        <br><br>
+        <p class="left-text">If you prefer to read or want another perspective, you can also check out this 
+            <a href="http://www.localhistories.org/korea.html">brief history of Korea</a>
+            by Tim Lambert at localhistories.org.</p>
+        <br>
+        <br>
+        <p class="left-text">
+            Please continute to explore the facets that have come together to form Korea.
+            Here are some additional resources that delve into interesting aspects of Korean history:
+        </p><br>
+        <p>
+            <a href="https://sites.google.com/site/koreanfolktales/home"><b>Korean folktales</b></a>
+            <br><br>
+            <a href="https://youtu.be/yxaegqvl4aE"><b>The Korean War (video)</b></a>
+            <br><br>
+            <b>Flag:&nbsp&nbsp</b>
+            <a href="https://theculturetrip.com/asia/south-korea/articles/a-brief-history-of-the-south-korean-flag/"><b>History</b></a>
+            ,&nbsp
+            <a href="https://en.wikipedia.org/wiki/Flag_of_South_Korea#Gallery"><b>Gallery over time</b></a>
+            <br><br>
+            <b>Notable Leaders:&nbsp&nbsp</b>
+            <a href="https://en.wikipedia.org/wiki/Dangun"><b>Dangun</b></a>
+            ,&nbsp
+            <a href="https://www.britannica.com/biography/Syngman-Rhee"><b>Syngman Rhee</b></a>
+            ,&nbsp
+            <a href="https://www.thoughtco.com/queen-min-of-joseon-korea-195721"><b>Queen Min</b></a>
+            ,&nbsp
+            <a href="https://youtu.be/dxtxQTiQRZQ"><b>Sejong the Great (video)</b></a>
+            , <br>
+            Admiral Yi Sun-Sin (awesome video series!)&nbsp<a href="https://www.youtube.com/watch?v=3ieaDfD_h6s"><b>Part 1</b></a>,
+            <a href="https://www.youtube.com/watch?v=hKBOoPfMvLc"><b>Part 2</b></a>,
+            <a href="https://www.youtube.com/watch?v=p97Xa6aB2jA"><b>Part 3</b></a>,
+            <a href="https://www.youtube.com/watch?v=QTan6eDphCk"><b>Part 4</b></a>,
+            <a href="https://www.youtube.com/watch?v=39Gsx6PaxiY"><b>Part 5</b></a>,
+            <br><br>
+            <b>Compare South v. North Korea:&nbsp&nbsp</b>
+            <a href="https://www.theguardian.com/world/datablog/2013/apr/08/south-korea-v-north-korea-compared"><b>Statistics</b></a>,
+            <a href="https://www.theguardian.com/world/2018/sep/19/parallel-lives-matching-portraits-from-south-and-north-korea-in-pictures"><b>Matching Portraits</b></a>,
+            <a href="https://en.wikipedia.org/wiki/North_Korea%E2%80%93South_Korea_relations"><b>Relations</b></a>
+            <br><br>
+            <a href="http://www.korea.net/AboutKorea/Korean-Life/Religion"><b>Diversity of religions</b></a>
+            <br><br>
+            <a href="https://msu.edu/~spock/history.html"><b>A Brief History of Taekwondo</b></a>
+        </p><br><br>
+        <h3 class="h3" id="shadows">
+            Customs
+        </h3>
+    </div><br><br>
+    
+
+    
+    <!-- section for adding and reading comments -->
+    <div class="comments">
+        <p  id="shadows" class="left-text" >
+            <b>Leave your own tip or comment:</b>
+        </p>
+        <form action="/tips" method="post" class="submit-comment" style="min-width: 100%">
+            <textarea class="form-control" id="textarea" rows="1" style="min-width: 100%" name="comment"></textarea>
+            <div class="small-divider"></div>
+            <button id=commentbutton class="btn btn-primary" type="submit">POST COMMENT</button>
+        </form>
+        <br>
+    <!-- add all comments to page -->
+        {% for comment in comments_list %}
+            <br>
+            <div class="comment-box">
+                <p class="left-text"><b>{{ comment.username }}</b> says:</p>
+                <p class="left-text" id="date">{{ comment.time }}</p>
+                <p class="left-text">{{ comment.comment }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

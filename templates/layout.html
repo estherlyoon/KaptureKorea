@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
+        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/journal/bootstrap.min.css" rel="stylesheet">
+
+        <!-- https://favicon.io/emoji-favicons/flag-south-korea/ -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link href="/static/favicon.ico" rel="icon">
+
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+        <!-- JQUERY PLUGIN CREDIT GOES TO JAMES TREOWORGY, FOUND AT http://www.outsharked.com/imagemapster/default.aspx?what.html -->
+        <script type="text/javascript" src="jquery.imagemapster.min.js"></script>
+
+        <title>Kapture Korea: {% block title %}{% endblock %}</title>
+
+    </head>
+
+    <body class="body">
+
+        <nav class="navbar navbar-expand-md navbar-light bg-primary">
+            <div class="small-divider"></div>
+            <a rel="icon" class="navbar-brand" href="/"><img src="/static/favicon.ico"></a>
+            <a class="navbar-brand" href="/"><span class="white">Kapture Korea</span></a>
+            <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="divider"></div>
+            <div class="collapse navbar-collapse" id="navbar">
+                {% if session.user_id %}
+                    <ul class="navbar-nav mr-auto mt-2">
+                        <div class="divider"></div>
+                        <div class="dropdown">
+                            <form action="/about" method="get">
+                                <!-- took out  data-toggle="dropdown" -->
+                                <button class="btn btn-primary dropdown-toggle" type="submit" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false" style="color:#191970">
+                                    <a class="nav-item-about" style="color:#191970">About Korea</a>
+                                </button>
+                            </form>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="/tips">Tourist Tips</a>
+                                <a class="dropdown-item" href="/language">Language</a>
+                                <a class="dropdown-item" href="/food">Food</a>
+                                <a class="dropdown-item" href="/events">Events</a>
+                            </div>
+                        </div>
+                    <div class="divider"></div>
+                        <li class="nav-items"><a class="nav-link" style="color:#191970" href="/places">MyPlaces</a></li>
+                        <div class="divider"></div>
+                        <li class="nav-items"><a class="nav-link" style="color:#191970" href="/itinerary">Itinerary</a></li>
+                    </ul>
+                    <div class="dropdown">
+                      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#191970">
+                        Hi, {{ username }}
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Profile</a>
+                        <a class="dropdown-item" href="/logout">Log Out</a>
+                      </div>
+                    </div>
+                    <div class="divider"></div>
+                {% else %}
+                    <ul class="navbar-nav ml-auto mt-2">
+                        <li class="nav-item"><a class="nav-link" style="color:white" href="/register">Register</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color:white" href="/login">Log In</a></li>
+                    </ul>
+                {% endif %}
+            </div>
+        </nav>
+
+        {% if get_flashed_messages() %}
+            <header>
+                <div class="alert alert-primary border text-center" role="alert">
+                    {{ get_flashed_messages() | join(" ") }}
+                </div>
+            </header>
+        {% endif %}
+
+        <main >
+            {% block main %}{% endblock %}
+        </main>
+
+        <br><br>
+        <footer class="small text-center text-muted">
+            Created by Esther Yoon for CS50, 2019
+        </footer>
+
+    </body>
+
+</html>

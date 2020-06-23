@@ -1,0 +1,246 @@
+.body{
+    background-color:white;
+}
+
+nav .navbar-brand{
+    /* size and outline for brand */
+    font-size: xx-large;
+    text-shadow:
+		-1px -1px 0 darkblue,
+		1px -1px 0 darkblue,
+		-1px 1px 0 darkblue,
+		1px 1px 0 darkblue;
+}
+
+#shadows {
+    color:white;
+    text-shadow:
+	-1px -1px 0 darkblue,
+	1px -1px 0 darkblue,
+	-1px 1px 0 darkblue,
+	1px 1px 0 darkblue;
+}
+
+
+/* color for brand */
+nav .navbar-brand .white{
+    color: white;
+}
+
+/* log in and register */
+nav .nav-item{
+    font-size: x-large;
+    text-shadow:
+		-1px -1px 0 darkblue,
+		1px -1px 0 darkblue,
+		-1px 1px 0 darkblue,
+		1px 1px 0 darkblue;
+}
+
+/* dropdown and navbar items */
+nav .nav-items{
+    font-size: x-large;
+}
+
+/* for about korea */
+nav .nav-item-about{
+    font-size: x-large;
+}
+
+.nav-items:hover {
+    background-color:#DE3434;
+    border-radius:8px;
+}
+
+.nav-items:active{
+    background-color:#DE3434;
+    border-radius:8px;
+}
+
+.apology {
+    width: 80%;
+    height: 60%;
+    position: absolute;
+    top: 100pt;
+    left: 100pt;
+}
+
+
+.dropdown-menu{
+    background-color: lightcoral;
+}
+
+
+.dropdown-item{
+    color:#191970;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-menu {display: block;}
+
+
+.divider{
+    width:50px;
+    height:auto;
+    display:inline-block;
+}
+
+.small-divider{
+    width:20px;
+    height:auto;
+    display:inline-block;
+}
+
+
+main .form-control{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+
+
+/* rext for hero image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* hero image for homepage */
+.jumbotron {
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("seoul.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+/* features for submitting comments in about pages*/
+.submit-comment {
+  display: inline-flex;
+}
+
+textarea {
+    width: 100%;
+}
+
+.comments {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.comment-box {
+    border-bottom: 2px solid #191970;
+    padding: 10px;
+}
+
+#date {
+    line-height: 0px;
+    font-size: 60%;
+    color: #191970;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.paragraphs {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+
+.coral-outline {
+    color: lightcoral;
+    text-shadow:
+	-1px -1px 0 darkblue,
+	1px -1px 0 darkblue,
+	-1px 1px 0 darkblue,
+	1px 1px 0 darkblue;
+	font-size: 350%;
+}
+
+.header {
+    text-align: left;
+    line-height: 150%;
+    color: #191970;
+}
+
+.h3 {
+    font-size: 250%;
+}
+
+.map {
+    display: block;
+    height:70%;
+    width:50%;
+    position: absolute;
+    top:120pt;
+    padding-left:105pt;
+    left:10pt;
+}
+
+img {
+    height:auto;
+}
+
+.tovisit {
+   height: 200px;
+   width: 400px;
+   border: 1px solid coral;
+   overflow: auto;
+   position: absolute;
+   top: 120pt;
+   right: 120pt;
+   padding: 10px;
+}
+
+.visited {
+   height: 200px;
+   width: 400px;
+   border: 1px solid coral;
+   overflow: auto;
+   position: absolute;
+   top: 300pt;
+   right: 120pt;
+   padding: 10px;
+}
+
+.city {
+    background:red;
+}
+
+.region {
+    background-color: red;
+}
+
+.itinerary {
+
+}
